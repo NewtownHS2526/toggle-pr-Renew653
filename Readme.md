@@ -267,6 +267,7 @@ subtitle.addEventListener("click", toggleCustomClass);
 
 ---
 
+
 ## DAY 2: `toggle()`
 
 ---

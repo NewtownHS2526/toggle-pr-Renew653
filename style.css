@@ -44,3 +44,7 @@ body {
 .hidden {
   display: none;
 }
+
+.custom {
+  color: brown;
+}
