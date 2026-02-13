@@ -1,13 +1,13 @@
 const heading = document.querySelector("#heading");
 
-const changeFontColor = () => {
-    heading.classList.toggle("blue-text"); 
+const changeFontColor = (e) => {
+    e.targe.classList.add("blue-text"); 
 };
 
 heading.addEventListener("click", changeFontColor);
 
 const subtitle = document.querySelector("#subheading");
-const changeSubtitleColor = () => {
+const changeSubtitleColor = (e) => {
     subtitle.classList.toggle("blue-text");
 };
 
@@ -29,7 +29,7 @@ replyBtn.addEventListener("click", showReply);
 const sendBtn = document.querySelector("#send-button");
 const cancelBtn = document.querySelector("#cancel-button");
 
-const hideReply = () => {
+const hideReply = (e) => {
     replyMessage.classList.add("hidden");
 };
 
@@ -87,3 +87,38 @@ const handleCheckbox = () => {
 };
 
 checkbox.addEventListener("click", handleCheckbox);
+
+const deleteBtn = document.querySelector("#delete");
+
+const handleDelete = () => {
+    inbox.classList.toggle("hidden");
+
+    if (deleteBtn.innerHTML === "Delete Message(s)") {
+        deleteBtn.innerHTML = "Undo Deletion";
+    } else {
+        deleteBtn.innerHTML = "Delete Message(s)";
+    }
+};
+deleteBtn.addEventListener("click", handleDelete);
+
+const readBtn = document.querySelector("#mark");
+
+const markRead = () => {
+    unreadBtn.classList.remove("hidden");
+    inbox.classList.remove("is-selected");
+    inbox.classList.add("is-read");
+    checkbox.checked = false;
+};
+
+readBtn.addEventListener("click", markRead);
+
+const darkModeBtn = document.querySelector("#dark");
+const body = document.querySelector("body");
+
+const toggleDarkMode = () => {
+    body.classList.toggle("dark-mode");
+};
+
+darkModeBtn.addEventListener("click", toggleDarkMode);
+
+const markbutton = document.querySelector("#mark-button");

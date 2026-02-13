@@ -414,7 +414,7 @@ readBtn.addEventListener("click", markRead);
 /* Add this to your style.css */
 .dark-mode {
     background-color: #1a1a2e;
-    color: #e0e0e0;
+    color`: #e0e0e0;
 }
 
 /* Feel free to customize! Look up Gmail dark mode for ideas */
